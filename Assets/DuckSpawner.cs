@@ -24,8 +24,8 @@ public class DuckSpawner : MonoBehaviour
     private IEnumerator SpawnDucks()
     {
         Instantiate(duck, transform.position, Quaternion.identity);
-        StartCoroutine(SpawnDucks());
         
         yield return new WaitForSeconds(spawnInterval);
+        StartCoroutine(SpawnDucks());
     }
 }
